@@ -1,6 +1,6 @@
 # Kraken Spotify Web Integration
 
-It displays the cover of the currently playing album from Spotify on the LCD of a water-cooled cooler other than the Kraken Elite model.
+The Kraken (non-Elite models) LCD display shows the album cover of the song currently playing on Spotify.
 
 ![image](./docs/applied.png)
 
