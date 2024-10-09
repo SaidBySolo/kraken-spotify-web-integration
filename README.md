@@ -8,8 +8,9 @@ It displays the cover of the currently playing album from Spotify on the LCD of 
 
 1. Open [NZXT CAM](https://nzxt.com/software/cam)
 2. Lighting -> LCD Display -> Web Integration
-3. Custom Web Integration -> Paste [https://kraken.solo.moe](https://kraken.solo.moe) -> Apply -> Configure -> Add as Card
-4. Enjoy!
+3. Custom Web Integration -> Paste [https://kraken.solo.moe](https://kraken.solo.moe) -> Apply
+4. Configure -> Login Spotify -> Refreah -> Add as Card
+5. Enjoy!
 
 ## Self Hosting
 
