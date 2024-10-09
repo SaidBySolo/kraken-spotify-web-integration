@@ -55,7 +55,9 @@ function App() {
       }
     }>
       {
-        playingAlbumCover === "" ? <h1 style={{ color: "white" }}>Not playing</h1> : <img src={playingAlbumCover} alt="Album cover" />
+        playingAlbumCover === ""
+          ? <h1 style={{ color: "white" }}>Not playing</h1>
+          : <img style={{ width: "240px", height: "240px", borderRadius: "2px" }} src={playingAlbumCover} alt="Album cover" />
       }
     </div>
 
