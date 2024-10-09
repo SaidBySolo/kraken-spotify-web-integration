@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Kraken Spotify Web Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It displays the cover of the currently playing album from Spotify on the LCD of a water-cooled cooler other than the Kraken Elite model.
 
-Currently, two official plugins are available:
+![image](./docs/applied.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## Expanding the ESLint configuration
+1. Open [NZXT CAM](https://nzxt.com/software/cam)
+2. Lighting -> LCD Display -> Web Integration
+3. Custom Web Integration -> Paste [https://kraken.solo.moe](https://kraken.solo.moe) -> Apply -> Configure -> Add as Card
+4. Enjoy!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Self Hosting
 
-- Configure the top-level `parserOptions` property like this:
+You need to change the following items in [App.tsx](./src/App.tsx):
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```tsx
+const clientId = '<YOUR_CLIENT_ID>';
+const redirectUri = 'http://localhost:5173';
 ```
