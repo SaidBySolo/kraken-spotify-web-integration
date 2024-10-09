@@ -54,13 +54,9 @@ function App() {
         width: "100vw"
       }
     }>
-      <img style={
-        {
-          borderRadius: "2px",
-          width: "240px",
-          height: "240px"
-        }
-      } src={playingAlbumCover} />
+      {
+        playingAlbumCover === "" ? <h1 style={{ color: "white" }}>Not playing</h1> : <img src={playingAlbumCover} alt="Album cover" />
+      }
     </div>
 
   )
